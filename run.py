@@ -16,10 +16,13 @@ def home():
 
 @app.route('/showfields/')
 def showfields():
-    feilds = getfields()
-    # fields = ['test'] * 4
-    # fields = [fields]
-    return render_template('showfields.html', fields=fields)
+    try:
+        feilds = getfeilds()
+        # fields = ['test'] * 4
+        # fields = [fields]
+        return render_template('showfields.html', feilds=feilds)
+    except Exception as e:
+        return render_template('error.html', error=e)
 
 @app.route('/template/')
 def template():
@@ -37,6 +40,8 @@ def makefield():
 
         os.chdir(APP_ROOT + '/static/feilds/')
         os.mkdir(loc + "_" + name)
+
+        return redirect(url_for('showfields'))
 
     return render_template('makefield.html')
 

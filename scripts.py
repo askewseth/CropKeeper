@@ -3,8 +3,8 @@ import os
 from run import app, APP_ROOT
 
 
-def getfields():
+def getfeilds():
     path = '/'.join([APP_ROOT, 'static', 'feilds'])
     rawfeilds = os.listdir(path)
-    feilds = [map(lambda x: x.replace("-", " "), feild.split("_")) for feild in feilds]
+    feilds = [map(lambda x: x.replace("-", " "), feild.split("_")) for feild in rawfeilds]
     return feilds

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -40,27 +40,28 @@
           </strong>
         </td>
       </tr>
-      <tr>
-        {% for field in fields %}
-        <td>
-          <input type="checkbox" name="check" value="">
-        </td>
-        <td>
-          {{ field[0] }}
-        </td>
-        <td>
-          {{ field[1] }}
-        </td>
-        <td>
-          {{ field[2] }}
-        </td>
-        <td>
-          {{ field[3] }}
-        </td>
+      
+      {% for feild in feilds %}
 
+        <tr>
+          <td>
+            <input type="checkbox" name="check" value="">
+          </td>
+          <td>
+            {{ feild[0] }}
+          </td>
+          <td>
+            {{ feild[1] }}
+          </td>
+          <td>
+            {{ feild[2] }}
+          </td>
+          <td>
+            {{ feild[3] }}
+          </td>
+        </tr>
 
-        {% endfor %}
-      </tr>
+      {% endfor %}
 
 		</table>
 
