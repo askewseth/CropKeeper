@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" media="screen" href = "/static/css/bootstrap.min.css">
+  <link rel="stylesheet" media="screen" href = "/static/js/bootstrap.js">
+  <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+  <title>
+  CropKeeper
+  </title>
+</head>
+
+	<body>
+		<h3>FIELDS</h3>
+
+
+		<table class="table">
+			<tr>
+        <td>
+          <input type="checkbox" name="checkall" value="">
+        </td>
+				<td>
+          <strong>
+          Field Name
+          </strong>
+				</td>
+				<td>
+          <strong>
+          Field Location
+          </strong>
+				</td>
+        <td>
+          <strong>
+          Field Size
+          </strong>
+        </td>
+        <td>
+          <strong>
+          Last Action Date
+          </strong>
+        </td>
+      </tr>
+      <tr>
+        {% for field in fields %}
+        <td>
+          <input type="checkbox" name="check" value="">
+        </td>
+        <td>
+          {{ field[0] }}
+        </td>
+        <td>
+          {{ field[1] }}
+        </td>
+        <td>
+          {{ field[2] }}
+        </td>
+        <td>
+          {{ field[3] }}
+        </td>
+
+
+        {% endfor %}
+      </tr>
+
+		</table>
+
+
+	</body>
+</html>
